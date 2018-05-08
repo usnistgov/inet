@@ -1,0 +1,38 @@
+README
+
+$ sudo apt install uml-utilities
+$ sudo apt install bridge-utils
+
+$ sudo tunctl -t mytap -u myuser
+$ sudo ifconfig tap0 192.168.1.21 up
+$ sudo brctl addbr mybridge
+
+
+
+------------------------
+USERID=bzoli
+# create a tap
+tunctl -t tap1 -u $USERID
+ip link set up dev tap1
+
+# create the bridge
+brctl addbr br0
+brctl addif br0 tap1
+
+# set the IP address and routing
+ip link set up dev br0
+ip addr add 10.1.1.1/24 dev br0
+ip route add 10.1.1.0/24 dev br0
+
+---------------------------
+
+https://www.virtualbox.org/wiki/Advanced_Networking_Linux
+
+http://user-mode-linux.sourceforge.net/old/UserModeLinux-HOWTO-6.html
+
+http://oboguev.net/misc/linux-tap.sh.txt
+
+http://backreference.org/2010/03/26/tuntap-interface-tutorial/
+
+https://www.nsnam.org/docs/models/html/tap.html
+
