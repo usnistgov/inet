@@ -167,12 +167,12 @@ module PhysicalEnvironment like IPhysicalEnvironment
         string objectCacheType = default("");  // NED type of object cache
         string groundType = default("");
         double temperature @unit(K) = default(293K);
-        double spaceMinX @unit(m) = default(0m/0); // lower bound of x coordinates in space, NaN means determined by physical objects, NaN by default
-        double spaceMinY @unit(m) = default(0m/0); // lower bound of y coordinates in space, NaN means determined by physical objects, NaN by default
-        double spaceMinZ @unit(m) = default(0m/0); // lower bound of z coordinates in space, NaN means determined by physical objects, NaN by default
-        double spaceMaxX @unit(m) = default(0m/0); // upper bound of x coordinates in space, NaN means determined by physical objects, NaN by default
-        double spaceMaxY @unit(m) = default(0m/0); // upper bound of y coordinates in space, NaN means determined by physical objects, NaN by default
-        double spaceMaxZ @unit(m) = default(0m/0); // upper bound of z coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMinX @unit(m) = default(nan m); // lower bound of x coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMinY @unit(m) = default(nan m); // lower bound of y coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMinZ @unit(m) = default(nan m); // lower bound of z coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMaxX @unit(m) = default(nan m); // upper bound of x coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMaxY @unit(m) = default(nan m); // upper bound of y coordinates in space, NaN means determined by physical objects, NaN by default
+        double spaceMaxZ @unit(m) = default(nan m); // upper bound of z coordinates in space, NaN means determined by physical objects, NaN by default
         xml config = default(xml("<config/>"));
         @display("i=misc/town");
         @class(PhysicalEnvironment);
