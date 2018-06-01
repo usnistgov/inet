@@ -52,7 +52,7 @@ endif
 
 # Copy contents from $(BUILDDIR) to $(DEPLOY_DIR)/$(DEPLOY_HTML_DIR) directory
 ifndef DEPLOY_HTML_DIR
-DEPLOY_HTML_DIR = docs
+DEPLOY_HTML_DIR = .
 endif
 
 
@@ -175,8 +175,7 @@ prepare_gh_pages_deployment:
 
 deploy_gh_pages: prepare_gh_pages_deployment
 	@echo "Deploying on github pages now..."
-	@cd $(DEPLOY_DIR); git add -A; git commit -m "docs updated at `date -u`";
-	#	git push origin $(DEPLOY_BRANCH) --quiet
+	@cd $(DEPLOY_DIR); git add -A; git commit -m "docs updated at `date -u`"; git push origin $(DEPLOY_BRANCH) --quiet
 	@echo "Github Pages deploy was completed at `date -u`"
 
 prepare_heroku_deployment:
