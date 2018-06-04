@@ -250,8 +250,7 @@ import tools.video
 
 def setup(app):
     app.connect("source-read", opp_preprocess)
-#    app.add_node(tools.video.video)
-    app.add_directive('youtube', tools.youtube.Youtube)
-    app.add_directive('vimeo', tools.youtube.Vimeo)
-    app.add_directive('video', tools.youtube.Video)
+    app.add_directive('youtube', tools.video.Youtube)
+    app.add_directive('vimeo', tools.video.Vimeo)
+    app.add_directive('video', tools.video.Video)
 
