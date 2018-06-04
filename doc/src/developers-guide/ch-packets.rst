@@ -9,6 +9,8 @@ communication protocols and applications by providing many useful C++
 components. In the following sections, we introduce the Packet API in
 detail, and we shed light on many common API usages through examples.
 
+.. youtube:: anwy2MPT5RE
+
 .. note::
 
     Code fragments in this chapter have been somewhat simplified for
@@ -24,6 +26,9 @@ detail, and we shed light on many common API usages through examples.
 .. role:: custom(any)
    :class: blaaa
 
+.. role:: ned
+
+.. role:: cpp
 
 .. default-role:: custom
 

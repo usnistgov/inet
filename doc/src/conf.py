@@ -12,9 +12,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
@@ -74,7 +74,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**/_docs']
+exclude_patterns = ['_build', '_deploy', 'Thumbs.db', '.DS_Store', '**/_docs']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -148,6 +148,8 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+#html_extra_path = ['.']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -244,5 +246,12 @@ def opp_preprocess(app, docname, source):
     source[0] = rendered
 
 # -- setup the customizations
+import tools.video
+
 def setup(app):
     app.connect("source-read", opp_preprocess)
+#    app.add_node(tools.video.video)
+    app.add_directive('youtube', tools.youtube.Youtube)
+    app.add_directive('vimeo', tools.youtube.Vimeo)
+    app.add_directive('video', tools.youtube.Video)
+

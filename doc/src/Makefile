@@ -29,4 +29,7 @@ server: Makefile
 
 html: Makefile
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@# copy the video files also to the output directory. This should be copied by the SPHINXBUILD itself, so this must be FIXED later.
+	@rsync -a --copy-links --prune-empty-dirs --exclude '_docs' --include '*/' --include '*.mp4' --include '*.m4v' --exclude '*' tutorials _build/html
+	@rsync -a --copy-links --prune-empty-dirs --exclude '_docs' --include '*/' --include '*.mp4' --include '*.m4v' --exclude '*' showcases _build/html
 
