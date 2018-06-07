@@ -41,6 +41,7 @@ release = ''
 extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
+    'sphinx.ext.todo',
     'sphinx.ext.githubpages',
     'sphinxcontrib.doxylink',
 ]
@@ -226,6 +227,8 @@ texinfo_documents = [
 #}
 
 # -- Extension configuration -------------------------------------------------
+todo_include_todos = True
+todo_emit_warnings = False
 
 def opp_preprocess(app, docname, source):
     """
