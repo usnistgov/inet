@@ -9,43 +9,12 @@ communication protocols and applications by providing many useful C++
 components. In the following sections, we introduce the Packet API in
 detail, and we shed light on many common API usages through examples.
 
-.. youtube:: anwy2MPT5RE
-
 .. note::
 
     Code fragments in this chapter have been somewhat simplified for
     brevity. For example, some modifiers and casts have been omitted,
     setting fields have been omitted, and some algorithms have been
     simplified to ease understanding.
-
-{{ opp.cppsnippet('ChunkConstructionExample') }}
-
-:cpp:`Aodv`, :cpp:`16PpmModulation.cc`
-:ned:`Server`
-
-.. role:: custom(any)
-   :class: blaaa
-
-.. role:: ned
-
-.. role:: cpp
-
-.. default-role:: custom
-
-`Server`
-
-.. role:: raw-html(raw)
-   :format: html
-
-:raw-html:`<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Link</button>`
-
-.. cssclass:: mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent
-
-:ned:`Server`
-
-.. rst-class::  mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent
-
-:ned:`Server`
 
 
 The representation of packets is an essential modeling support for

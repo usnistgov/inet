@@ -14,4 +14,5 @@ Welcome to INET Framework's documentation!
    developers-guide/index
    tutorials/index
    showcases/index
-   reference/index
+   reference/ned/index
+   reference/cpp/index
