@@ -17,7 +17,7 @@
 //
 
 cplusplus {{
-#include "INETDefs.h"
+#include "inet/common/INETDefs.h"
 
 #define CANAPP_CLI_SAP  0xf0
 #define CANAPP_SRV_SAP  0xf1

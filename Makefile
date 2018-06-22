@@ -37,13 +37,13 @@ checkmakefiles: submodule-init
 	exit 1; \
 	fi
 
-submodule-init:
-	@if [ -d .git ]; then \
-	if [ ! -f tutorials/package.ned ]; then \
-	echo 'Fetching git submodules (tutorials, showcases)...'; \
-	git submodule update --init; \
-	fi \
-	fi
+#submodule-init:
+#	@if [ -d .git ]; then \
+#	if [ ! -f tutorials/package.ned ]; then \
+#	echo 'Fetching git submodules (tutorials, showcases)...'; \
+#	git submodule update --init; \
+#	fi \
+#	fi
 
 # generate an include file that contains all the WITH_FEATURE macros according to the current enablement of features
 $(FEATURES_H): $(wildcard .oppfeaturestate) .oppfeatures
