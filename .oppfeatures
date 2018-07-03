@@ -1,5 +1,37 @@
 <features cppSourceRoots="src" definesFile="src/inet/features.h">
     <feature
+        id="CAN_common"
+        name="CAN Common"
+        description = "The common part of CAN implementation"
+        initiallyEnabled = "true"
+        requires = ""
+        labels = ""
+        nedPackages = "
+                       inet.applications.can
+                       inet.buffer.can
+                       inet.bus.can
+                       inet.linklayer.can
+                       inet.node.can
+					   inet.scheduler.can
+                      "
+        extraSourceFolders = ""
+        compileFlags = "-DWITH_CAN_COMMON"
+        linkerFlags = ""
+        />
+    <feature
+        id="CAN_examples"
+        name="CAN examples"
+        description = "Examples for the CAN implementation"
+        initiallyEnabled = "true"
+        requires = "CAN_common"
+        labels = ""
+        nedPackages = "
+                       inet.examples.can
+                      "
+        extraSourceFolders = ""
+        linkerFlags = ""
+        />
+    <feature
         id="TCP_common"
         name="TCP Common"
         description = "The common part of TCP implementations"
