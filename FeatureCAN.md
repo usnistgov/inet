@@ -1,6 +1,6 @@
 # FeatureCAN branch: 
 
-We have adapted the FICO4OMNET-CAN package (http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT) to OMNET ++ 5.2.1 & the latest INET Framework version 3.6.4 so that we can use these experiments within the UCEF Environement VM. 
+We have adapted the FICO4OMNET-CAN package (http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT) to OMNET ++ 5.2.1 & the latest INET Framework version 3.6.4 so that we can use the CAN experiments within the UCEF Environement VM. 
 
 Changes we made to the FICO4OMNET-CAN package : 
 
