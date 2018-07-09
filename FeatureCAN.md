@@ -56,6 +56,6 @@
 	• In eclipse : 
 
 	- File => import => Existing project into workspace => Select root directory => Browse => /home/vagrant/inet/
-	- When the project is imported :  Inet -> Examples -> can
+	- When the project is imported :  Inet -> Examples -> can -> arbitration
 	- right click on omnetpp.ini -> run as omnetpp++ Simulation. 
 
