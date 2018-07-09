@@ -37,8 +37,26 @@ Changes we made to the FICO4OMNET-CAN package :
 All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can. 
 
 
-
 # Step by step to run the CAN examples withing INET Vx and OMNET Vy 
 
 
-git clone -b feature/can https://github.com/usnistgov/inet.git
+git add*
+git commit
+git push
+
+
+OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
+PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
+
+
+./inet_featuretool disable wirelesstutorial
+./inet_featuretool disable wirelessshowcases
+./inet_featuretool disable visualizationtutorial
+./inet_featuretool disable configuratortutorial
+./inet_featuretool disable visualizershowcases
+
+./inet_featuretool reset
+
+
+make makefiles
+make
