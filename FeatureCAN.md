@@ -47,17 +47,16 @@ Changes we made to the FICO4OMNET-CAN package :
 	- ./inet_featuretool disable visualizershowcases
 	- ./inet_featuretool reset
 
+        • Pushing all the changes to the Git Repository. 
 
-git add*
-git commit
-git push
- 
-All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can. 
+	- git add*
+	- git commit
+	- git push
+	- All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can.
 
+# Clone and Build steps : 
 
-# Step by step to run the CAN examples withing INET Vx and OMNET Vy 
-
-
-make makefiles
-make
+	- git clone -b feature/can https://github.com/usnistgov/inet.git
+	- make makefiles
+	- make
 
