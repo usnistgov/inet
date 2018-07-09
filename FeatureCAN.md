@@ -36,7 +36,7 @@ Changes we made to the FICO4OMNET-CAN package :
 
         • Pushing all the changes to the Git Repository. 
 
-	- git add*
+	- git add *
 	- git commit
 	- git push
 	- All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can.
