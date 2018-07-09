@@ -33,18 +33,19 @@ Changes we made to the FICO4OMNET-CAN package :
 	
 	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory, must be chanegd to src/node to adapt to the destination package.
 
-
-OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
-PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
-
-
-./inet_featuretool disable wirelesstutorial
-./inet_featuretool disable wirelessshowcases
-./inet_featuretool disable visualizationtutorial
-./inet_featuretool disable configuratortutorial
-./inet_featuretool disable visualizershowcases
-
-./inet_featuretool reset
+        • Setting the environement variables : 
+	
+	- OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
+	- PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
+ 
+        • Configuring the features 
+	
+	- ./inet_featuretool disable wirelesstutorial
+	- ./inet_featuretool disable wirelessshowcases
+	- ./inet_featuretool disable visualizationtutorial
+	- ./inet_featuretool disable configuratortutorial
+	- ./inet_featuretool disable visualizershowcases
+	- ./inet_featuretool reset
 
 
 git add*
