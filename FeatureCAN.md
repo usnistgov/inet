@@ -20,12 +20,12 @@ Changes we made to the FICO4OMNET-CAN package :
 
 	• We have changed the namespace from fico4omnet to inet in every source code file in the following folders and files 
 	
-	•• inet/src/application/* 
-	•• inet/src/node/can/* 
-	•• inet/src/linklayer/can/*
-	•• inet/src/buffer/can/*
-	•• inet/examples/can/*
-	•• inet/examples/package.ned
+	-  inet/src/application/* 
+	-  inet/src/node/can/* 
+	-  inet/src/linklayer/can/*
+	-  inet/src/buffer/can/*
+	-  inet/examples/can/*
+	-  inet/examples/package.ned
 	
 	• We have created the src/base/Inet_DEFS.h file which replaces every call of the old fico4omnet_Defs.h in every file that contains the latter.
 	
