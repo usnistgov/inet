@@ -36,8 +36,8 @@
 	• Push changes to the git repo : 
 	
 	- git add *
-- git commit
-- git push
+	- git commit
+	- git push
 	
 
 # Run CAN examples (ex : arbitration)
@@ -48,12 +48,12 @@
 	-  OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
 	-  PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
 	
-cd   /home/vagrant/inet/
+	• cd   /home/vagrant/inet/
 	
 	- make makefiles 
 	- make
 	
-In eclipse : 
+	• In eclipse : 
 
 	- File => import => Existing project into workspace => Select root directory => Browse => /home/vagrant/inet/
 	- When the project is imported :  Inet -> Examples -> can
