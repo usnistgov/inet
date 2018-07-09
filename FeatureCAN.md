@@ -13,9 +13,10 @@ Changes we made to the FICO4OMNET-CAN package :
 	-  inet/examples/can/*
 	-  inet/examples/package.ned
 	
-	• We have created the src/base/Inet_DEFS.h file which replaces every call of the old fico4omnet_Defs.h in every file that contains the latter.
+	• We have created the src/base/Inet_DEFS.h to replace the fico4omnet_Defs.h library. 
+	• We have replaced every fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
 	
-	• We have added the CAN features to the (.oppfeatures)
+	• We have mnaually added the CAN features to the (.oppfeatures) file. 
 	
 	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory, must be chanegd to src/node to adapt to the destination package.
 
