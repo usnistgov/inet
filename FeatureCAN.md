@@ -20,7 +20,7 @@
 	
 	- In (b) Create /home/vagrant/inet/src/base/Inet_DEFS.h to replace the /home/vagrant/inet/src/base/fico4omnet_Defs.h library file. 
 	- Use the following command to find all occurrences of fico4omnet namespace and fico4omnet_Defs.h library import : 
-	-      ﻿grep -rnw '/home/vagrant/inet' -e 'fico4omnet'
+	      grep -rnw '/home/vagrant/inet' -e 'fico4omnet'
 	- Replace fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
 	-  Add the CAN features to the /home/vagrant/inet/.oppfeatures file. 
 
