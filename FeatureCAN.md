@@ -15,10 +15,10 @@ Changes we made to the FICO4OMNET-CAN package :
 	
 	• We have created the src/base/Inet_DEFS.h to replace the fico4omnet_Defs.h library. 
 	• We have replaced every fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
-	
 	• We have mnaually added the CAN features to the (.oppfeatures) file. 
 	
-	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory, must be chanegd to src/node to adapt to the destination package.
+	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory. 
+	-  must be chanegd to src/node to adapt to the destination package.
 
         • Setting the environement variables : 
 	
@@ -39,7 +39,9 @@ Changes we made to the FICO4OMNET-CAN package :
 	- git add *
 	- git commit
 	- git push
-	- All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can.
+	
+        • Modifications are committed in usnistgov/inet under feature/can branch under the following labels : 
+	- can_commit, can_commit2, and can_commit3 
 
 # Clone and Build steps : 
 
