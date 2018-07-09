@@ -1,31 +1,30 @@
-# Modifications to the INET files and FICO4OMNET CAN package  
 
-We have adapted the FICO4OMNET-CAN package (http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT) to work with OMNET ++ version 5.2.1 & INET Framework version 3.6.4 to be able to run CAN experiments in the UCEF Environement environemnt VM. 
+# Modifications 
 
-Changes we made to the FICO4OMNET-CAN package : 
+	• fork from inet-framework/inet in usnistgov/inet
+	• In the UCEF VM , clone the repos below in the following folder :  /home/vagrant 
+	
+	- (a) ( git clone http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT ) (/home/vagrant/﻿FiCo4OMNeT)
+	- (b) ( git clone -b feature/can https://github.com/usnistgov/inet.git           ) (/home/vagrant/inet)
+	
+	• Copy/Merge the following folders and files from (a) to (b) . Don’t copy FlexRay files from (a) as we are interested in CAN technology so far.  
 
-	• We have changed the namespace from fico4omnet to inet in every source code file in the following folders and files 
+	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/application/can/*     ==>    /home/vagrant/inet/src/inet/application/
+	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/nodes/can/*              ==>   /home/vagrant/inet/src/inet/node/
+	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/linklayer/can/*          ==>   /home/vagrant/inet/src/inet/linklayer/
+	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/buffer/can/*              ==>   /home/vagrant/inet/src/inet/buffer/
+	- /home/vagrant/﻿FiCo4OMNeT/examples/can/*                                      ==>   /home/vagrant/inet/examples/
+	- /home/vagrant/﻿FiCo4OMNeT/examples/package.ned                          ==>   /home/vagrant/inet/examples/
 	
-	-  inet/src/application/* 
-	-  inet/src/node/can/* 
-	-  inet/src/linklayer/can/*
-	-  inet/src/buffer/can/*
-	-  inet/examples/can/*
-	-  inet/examples/package.ned
+	• Create / Modify the following files and folders
 	
-	• We have created the src/base/Inet_DEFS.h to replace the fico4omnet_Defs.h library. 
-	• We have replaced every fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
-	• We have mnaually added the CAN features to the (.oppfeatures) file. 
-	
-	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory. 
-	-  must be chanegd to src/node to adapt to the destination package.
+	- In (b) Create /home/vagrant/inet/src/base/Inet_DEFS.h to replace the /home/vagrant/inet/src/base/fico4omnet_Defs.h library file. 
+	- Use the following command to find all occurrences of fico4omnet namespace and fico4omnet_Defs.h library import : 
+	-      ﻿grep -rnw '/home/vagrant/inet' -e 'fico4omnet'
+	- Replace fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
+	-  Add the CAN features to the /home/vagrant/inet/.oppfeatures file. 
 
-        • Setting the environement variables : 
-	
-	- OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
-	- PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
- 
-        • Configuring the features 
+	· Configuring the features 
 	
 	- ./inet_featuretool disable wirelesstutorial
 	- ./inet_featuretool disable wirelessshowcases
@@ -34,18 +33,29 @@ Changes we made to the FICO4OMNET-CAN package :
 	- ./inet_featuretool disable visualizershowcases
 	- ./inet_featuretool reset
 
-        • Pushing all the changes to the Git Repository. 
-
-	- git add *
-	- git commit
-	- git push
+	• Push changes to the git repo : 
 	
-        • Modifications are committed using the following messages : 
-	- can_commit, can_commit2, and can_commit3 
+	- git add *
+- git commit
+- git push
+	
 
-# Clone and Build steps : 
+# Run CAN examples (ex : arbitration)
 
-	- git clone -b feature/can https://github.com/usnistgov/inet.git
-	- make makefiles
+	
+	• Set the environment variables
+	
+	-  OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
+	-  PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
+	
+cd   /home/vagrant/inet/
+	
+	- make makefiles 
 	- make
+	
+In eclipse : 
+
+	- File => import => Existing project into workspace => Select root directory => Browse => /home/vagrant/inet/
+	- When the project is imported :  Inet -> Examples -> can
+	- right click on omnetpp.ini -> run as omnetpp++ Simulation. 
 
