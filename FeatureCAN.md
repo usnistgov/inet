@@ -33,17 +33,6 @@ Changes we made to the FICO4OMNET-CAN package :
 	
 	• In inet/examples : CAN examples use the notation src/nodes when calling files under this directory, must be chanegd to src/node to adapt to the destination package.
 
- 
-All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can. 
-
-
-# Step by step to run the CAN examples withing INET Vx and OMNET Vy 
-
-
-git add*
-git commit
-git push
-
 
 OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
 PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
@@ -58,5 +47,16 @@ PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
 ./inet_featuretool reset
 
 
+git add*
+git commit
+git push
+ 
+All the changes are committed as can_commit, can_commit2, and can_commit3 in usnistgov/inet under the branch feature/can. 
+
+
+# Step by step to run the CAN examples withing INET Vx and OMNET Vy 
+
+
 make makefiles
 make
+
