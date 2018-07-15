@@ -7,8 +7,7 @@
 	- (a) ( git clone http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT ) (/home/vagrant/﻿FiCo4OMNeT)
 	- (b) ( git clone -b feature/can https://github.com/usnistgov/inet.git           ) (/home/vagrant/inet)
 	
-* Copy/Merge the following folders and files from (a) to (b)
-* Don’t copy FlexRay files from (a) as we are interested in CAN files only.  
+* Copy/Merge the following folders and files from (a) to (b) 
 
 	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/application/can/*     ==>    /home/vagrant/inet/src/inet/application/
 	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/nodes/can/*              ==>   /home/vagrant/inet/src/inet/node/
@@ -17,6 +16,7 @@
 	- /home/vagrant/﻿FiCo4OMNeT/examples/can/*                                      ==>   /home/vagrant/inet/examples/
 	- /home/vagrant/﻿FiCo4OMNeT/examples/package.ned                          ==>   /home/vagrant/inet/examples/
 
+* Don’t copy FlexRay files from (a) as we are interested in CAN files only. 
 * Create / Modify the following files and folders
 	
 	- In (b) Create /home/vagrant/inet/src/base/Inet_DEFS.h to replace the /home/vagrant/inet/src/base/fico4omnet_Defs.h library file. 
