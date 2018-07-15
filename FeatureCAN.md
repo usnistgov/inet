@@ -7,7 +7,8 @@
 	- (a) ( git clone http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT ) (/home/vagrant/﻿FiCo4OMNeT)
 	- (b) ( git clone -b feature/can https://github.com/usnistgov/inet.git           ) (/home/vagrant/inet)
 	
-* Copy/Merge the following folders and files from (a) to (b) . Don’t copy FlexRay files from (a) as we are interested in CAN technology so far.  
+* Copy/Merge the following folders and files from (a) to (b)
+* Don’t copy FlexRay files from (a) as we are interested in CAN technology so far.  
 
 	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/application/can/*     ==>    /home/vagrant/inet/src/inet/application/
 	- /home/vagrant/﻿FiCo4OMNeT/src/﻿fico4omnet/nodes/can/*              ==>   /home/vagrant/inet/src/inet/node/
