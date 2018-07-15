@@ -2,7 +2,7 @@
 # Modifications 
 
 • fork from inet-framework/inet in usnistgov/inet
-• In the UCEF VM , clone the repos below in the following folder :  /home/vagrant 
+* In the UCEF VM , clone the repos below in the following folder :  /home/vagrant 
 	
 	- (a) ( git clone http://git.inet.haw-hamburg.de/core/public/FiCo4OMNeT ) (/home/vagrant/﻿FiCo4OMNeT)
 	- (b) ( git clone -b feature/can https://github.com/usnistgov/inet.git           ) (/home/vagrant/inet)
