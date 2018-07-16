@@ -61,12 +61,12 @@
 
 * Configuring the features 
 ```
-	- ./inet_featuretool reset
-	- ./inet_featuretool disable wirelesstutorial
-	- ./inet_featuretool disable wirelessshowcases
-	- ./inet_featuretool disable visualizationtutorial
-	- ./inet_featuretool disable configuratortutorial
-	- ./inet_featuretool disable visualizershowcases
+	./inet_featuretool reset
+	./inet_featuretool disable wirelesstutorial
+	./inet_featuretool disable wirelessshowcases
+	./inet_featuretool disable visualizationtutorial
+	./inet_featuretool disable configuratortutorial
+	./inet_featuretool disable visualizershowcases
 ```   
 
 * Push changes to the git repo : 
