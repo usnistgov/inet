@@ -24,8 +24,7 @@
 	      grep -rnw '/home/vagrant/inet' -e 'fico4omnet'
 	- Replace fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
 	-  Add the CAN features to the /home/vagrant/inet/.oppfeatures file. 
-	
-	
+	/*
 	<feature
         id="CAN_common"
         name="CAN Common"
@@ -58,6 +57,7 @@
         extraSourceFolders = ""
         linkerFlags = ""
         />
+*/
 
 * Configuring the features 
 	
