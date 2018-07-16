@@ -67,7 +67,8 @@
 	- ./inet_featuretool disable visualizationtutorial
 	- ./inet_featuretool disable configuratortutorial
 	- ./inet_featuretool disable visualizershowcases
-```
+```   
+
 * Push changes to the git repo : 
 ```
 	- git add *
@@ -77,7 +78,7 @@
 
 # Run CAN examples (ex : arbitration)
 
-	• Set the environment variables
+* Set the environment variables
 ```
 	-  OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
 	-  PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
@@ -87,7 +88,8 @@
 	- make makefiles 
 	- make
 ```
-	• In eclipse : 
+
+* In eclipse : 
 ```
 	- File => import => Existing project into workspace => Select root directory => Browse => /home/vagrant/inet/
 	- When the project is imported :  Inet -> Examples -> can -> arbitration
