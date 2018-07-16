@@ -60,7 +60,7 @@
  ```   
 
 * Configuring the features 
-	```
+```
 	- ./inet_featuretool reset
 	- ./inet_featuretool disable wirelesstutorial
 	- ./inet_featuretool disable wirelessshowcases
