@@ -78,6 +78,13 @@
 
 # Run CAN examples (ex : arbitration)
 
+* Clone feature/can to /home/vagrant
+
+```
+git clone -b feature/can https://github.com/usnistgov/inet.git
+
+```
+
 * Set the environment variables
 ```
 	-  OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
