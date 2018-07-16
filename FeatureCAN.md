@@ -24,6 +24,40 @@
 	      grep -rnw '/home/vagrant/inet' -e 'fico4omnet'
 	- Replace fico4omnet_Defs.h library import with the the src/base/Inet_DEFS.h library import. 
 	-  Add the CAN features to the /home/vagrant/inet/.oppfeatures file. 
+	
+	
+	<feature
+        id="CAN_common"
+        name="CAN Common"
+        description = "The common part of CAN implementation"
+        initiallyEnabled = "true"
+        requires = ""
+        labels = ""
+        nedPackages = "
+                       inet.applications.can
+                       inet.buffer.can
+                       inet.bus.can
+                       inet.linklayer.can
+                       inet.node.can
+                       inet.scheduler.can
+                      "
+        extraSourceFolders = ""
+        compileFlags = "-DWITH_CAN_COMMON"
+        linkerFlags = ""
+        />
+    <feature
+        id="CAN_examples"
+        name="CAN examples"
+        description = "Examples for the CAN implementation"
+        initiallyEnabled = "true"
+        requires = "CAN_common"
+        labels = ""
+        nedPackages = "
+                       inet.examples.can
+                      "
+        extraSourceFolders = ""
+        linkerFlags = ""
+        />
 
 * Configuring the features 
 	
