@@ -89,9 +89,12 @@ git clone -b feature/can https://github.com/usnistgov/inet.git
 ```
 	-  OMNETPP_CONFIGFILE=/opt/omnetpp/omnetpp-5.2.1/Makefile.inc
 	-  PATH=$PATH:/opt/omnetpp/omnetpp-5.2.1/bin/
-	
-	• cd   /home/vagrant/inet/
-	
+```	
+
+* build project 
+
+```
+	- cd /home/vagrant/inet/
 	- make makefiles 
 	- make
 ```
